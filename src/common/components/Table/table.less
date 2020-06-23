@@ -1,0 +1,43 @@
+.table {
+    background: #FFFFFF;
+    box-shadow: 15px 15px 25px rgba(21, 65, 139, 0.05);
+    border-radius: 5px;
+    padding: 15px;
+    &-header {
+        display: grid;
+        grid-template-columns: 25% 25% auto 25%;
+        border-bottom: 1px solid rgba(32,81,163,0.1);
+        &-cell {
+            padding: 10px 20px;
+            &__label {
+                font-size: 24px;
+            }
+        }
+    }
+    &-cell {
+        display: flex;
+        align-items: center;
+        padding: 10px 20px;
+        margin: 5px;
+        &:nth-child(3) {
+            border: 1px solid rgba(0,0,0,0.1);
+        }
+        &:last-child {
+            justify-content: flex-end;
+        }
+    }
+    &-row {
+        display: grid;
+        grid-template-columns: 25% 25% auto 25%;
+        border-bottom: 1px solid rgba(32,81,163,0.1);
+        &:last-of-type {
+            border-bottom: none;
+        }
+    }
+}
+.person-set__delete, .person-set__edit {
+    cursor: pointer;
+}
+.person-set__delete {
+    margin-left: 25px;
+}

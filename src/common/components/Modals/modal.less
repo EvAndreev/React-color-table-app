@@ -1,0 +1,66 @@
+.modal {
+    display: none;
+    &.opened {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        display: block;
+    }
+    &-overlay {
+        min-height: 100vh;
+        width: 100%;
+        background: #0B1F35;
+        opacity: 0.2;
+    }
+    &-block {
+        width: 300px;
+        min-height: 450px;
+        background: #ffffff;
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 30px;
+        box-sizing: border-box;
+        box-shadow: -20px 15px 25px rgba(11, 31, 53, 0.1);
+        display: flex;
+        flex-direction: column;
+        &__close {
+            font-family: 'Montserrat', sans-serif;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 15px;
+            color: #2051A3;
+            display: flex;
+            align-items: center;
+            align-self: flex-start;
+            cursor: pointer;
+            & > svg {
+                margin-right: 3px;
+            }
+        }
+        &__children {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            flex: 1;
+        }
+        &-cells {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+
+        }
+        &-cell {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            margin: 10px 0;
+        }
+        &-forms > .btn {
+            margin: 100px auto 0;
+        }
+    }
+}
